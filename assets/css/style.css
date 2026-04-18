@@ -124,7 +124,7 @@ nav {
 
 .nav-links a {
   color: var(--text);
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-family: var(--font-mono);
@@ -180,6 +180,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-top: -6rem;
 }
 
 /* ── Image frame — targeting bracket corners ────────────── */
@@ -257,10 +258,14 @@ nav {
 .glitch-wrap::before { z-index: 2; }
 .glitch-wrap::after  { z-index: 3; }
 
-/* Activate on hover */
-.glitch-wrap:hover img     { animation: glitch-img 4s linear infinite; }
-.glitch-wrap:hover::before { animation: glitch-r   4s linear infinite; filter: hue-rotate(85deg)  saturate(8) contrast(1.4); }
-.glitch-wrap:hover::after  { animation: glitch-b   4s linear infinite; filter: hue-rotate(200deg) saturate(8) contrast(1.4); }
+/* Always active — stop on hover */
+.glitch-wrap img     { animation: glitch-img 10s linear infinite; }
+.glitch-wrap::before { animation: glitch-r   10s linear infinite; filter: hue-rotate(85deg)  saturate(4) contrast(1.2); }
+.glitch-wrap::after  { animation: glitch-b   10s linear infinite; filter: hue-rotate(200deg) saturate(4) contrast(1.2); }
+
+.glitch-wrap:hover img     { animation: none; transform: translate(0, 0); clip-path: inset(0 0 0 0); filter: none; }
+.glitch-wrap:hover::before,
+.glitch-wrap:hover::after  { animation: none; opacity: 0 !important; }
 
 /* ── Main image: constant tremor + 6 burst episodes ── */
 @keyframes glitch-img {
