@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       META — character encoding and viewport must always be first.
+       charset: tells the browser this file is UTF-8 text.
+       viewport: makes the page fit mobile screens correctly.
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       SECURITY HEADERS via <meta> tags
+       NOTE: real HTTP headers (set by the server) are stronger,
+       but GitHub Pages doesn't let you set them — meta is the
+       best we can do here. We will add Cloudflare headers later.
+
+       Content-Security-Policy (CSP):
+         Tells the browser where scripts, styles, images etc. are
+         allowed to load FROM. Blocks injected foreign scripts.
+         'self' = only this domain. 'unsafe-inline' is needed for
+         our inline <style> if any — we'll avoid inline styles.
+
+       X-Content-Type-Options:
+         Stops the browser from guessing the file type.
+         Prevents "MIME sniffing" attacks.
+
+       Referrer-Policy:
+         Controls what URL is sent as the "Referer" header when
+         a user clicks a link leaving your site.
+         'strict-origin-when-cross-origin' = send only the domain,
+         not the full path, to external sites.
+       ============================================================ -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <title>lpsn | Sikkerhed & Forensics</title>
+
+  <!-- SEO: description shown in Google search results -->
+  <meta name="description" content="Lasse Pedersen — IT-sikkerhedsstuderende, SOC & digital efterforskning, SIEM, Linux, OSINT.">
+
+  <!-- canonical: tells search engines the "official" URL of this page -->
+  <link rel="canonical" href="https://lpsn.dk/">
+
+  <!-- Open Graph: controls the preview card when shared on social media -->
+  <meta property="og:title" content="lpsn">
+  <meta property="og:description" content="IT-sikkerhedsstuderende — SOC, digital efterforskning, SIEM, Linux, OSINT.">
+  <meta property="og:url" content="https://lpsn.dk/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       HERO SECTION
+       <main> wraps the primary content — only one per page.
+       <section> groups related content with a semantic meaning.
+       ============================================================ -->
+  <main>
+    <section id="hero">
+      <div class="container">
+
+        <!-- HERO NAME — top-left corner, above nav and content -->
+        <h1 class="hero-name">
+          <span class="accent">&gt;</span> Lasse Pedersen
+        </h1>
+
+        <!-- TYPED TEXT — directly under hero name -->
+        <p class="hero-title">
+          <span id="typed-text"></span><span class="cursor" aria-hidden="true"></span>
+        </p>
+
+        <div class="hero-outer">
+
+          <!-- VERTICAL NAV — left of hero text -->
+          <nav>
+            <ul class="nav-links">
+              <li><a href="#about">Om</a></li>
+              <li><a href="#skills">Kompetencer</a></li>
+              <li><a href="#experience">Erfaring</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+            </ul>
+          </nav>
+
+        <div class="hero-grid">
+
+          <!-- LEFT — text content -->
+          <div class="hero-text">
+
+            <p class="hero-desc">
+              Jeg hedder Lasse. Dette er mit site — her kan du læse om hvem jeg er
+              og hvad jeg kan, og til tider følge med i projekter og ting jeg har gang i.
+              Når jeg ikke studerer finder du mig på TryHackMe, hvor jeg løser challenges
+              inden for OSINT og forensics. To områder jeg er helt vild med.
+            </p>
+
+          </div>
+
+          <!-- RIGHT — profile image with glitch effect on hover -->
+          <div class="hero-image">
+            <div class="image-frame">
+              <div class="glitch-wrap">
+                <img src="assets/pictures/Profile.jpg" alt="Lasse Pedersen">
+              </div>
+              <span class="bracket tl" aria-hidden="true"></span>
+              <span class="bracket br" aria-hidden="true"></span>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section id="about">
+      <div class="container">
+        <h2>Om</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Jeg hedder <strong class="hl">Lasse Pedersen</strong> og er IT-sikkerhedsstuderende med base i Nordjylland.
+              Jeg har en baggrund som IT-teknolog fra UCN Aalborg, hvor jeg byggede
+              fundamentet inden for netværk, programmering og indlejrede systemer.
+              Nu er jeg i gang med professionsbacheloruddannelsen i IT-sikkerhed —
+              med fokus på SOC, digital efterforskning og SIEM.
+            </p>
+            <p>
+              Praktisk erfaring fra praktik hos <strong class="hl">LabTech Data Erhverv</strong>,
+              hvor jeg arbejdede med netværksinfrastruktur, Microsoft 365 og
+              sikkerhedsmonitorering med Wazuh og Suricata. Til daglig nørder jeg
+              med TryHackMe, Linux og en hjemmeserver der aldrig helt er færdig.
+            </p>
+          </div>
+          <div>
+            <p class="about-label">// Udforsker</p>
+            <div class="tag-list">
+              <span class="tag">Digital Forensics</span>
+              <span class="tag">OSINT</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CTF</span>
+              <span class="tag">Networking</span>
+              <span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS
+         ============================================================ -->
+    <section id="skills">
+      <div class="container">
+        <h2>Kompetencer</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3>Sikkerhed</h3>
+            <ul>
+              <li>SIEM — Wazuh / Suricata</li>
+              <li>Netværk &amp; Systemadministration</li>
+              <li>OSINT &amp; Digital Efterforskning</li>
+              <li>DNS &amp; E-mailsikkerhed (SPF/DKIM/DMARC)</li>
+              <li>CTF / TryHackMe</li>
+              <li>Microsoft 365 / Azure Entra ID</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3>Udvikling</h3>
+            <ul>
+              <li>Python</li>
+              <li>HTML / CSS</li>
+              <li>Bash / Shell</li>
+              <li>Docker &amp; Docker Compose</li>
+              <li>Git</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3>Platforme &amp; Værktøjer</h3>
+            <ul>
+              <li>Linux — Arch, Debian, Kali</li>
+              <li>Wazuh / Suricata</li>
+              <li>Nmap / Wireshark</li>
+              <li>Burp Suite</li>
+              <li>Windows Server — AD, DHCP, DNS</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EXPERIENCE / TIMELINE
+         ============================================================ -->
+    <section id="experience">
+      <div class="container">
+        <h2>Erfaring</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-date">2025 – nu</div>
+            <div class="timeline-line">
+              <div class="timeline-dot"></div>
+              <div class="timeline-connector"></div>
+            </div>
+            <div class="timeline-content">
+              <h3>Professionsbachelor i IT-sikkerhed (PSI)</h3>
+              <div class="org">UCN Aalborg</div>
+              <p>
+                Overbygning på IT-teknologuddannelsen med fokus på avanceret
+                sikkerhedsmonitorering, forensics og infrastrukturbeskyttelse.
+                Forventet afslutning: 2027.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Jan – Mar 2025</div>
+            <div class="timeline-line">
+              <div class="timeline-dot"></div>
+              <div class="timeline-connector"></div>
+            </div>
+            <div class="timeline-content">
+              <h3>IT-Sikkerhedspraktikant</h3>
+              <div class="org">LabTech Data Erhverv, Aalborg</div>
+              <p>
+                Infrastruktur og sikkerhed i et MSP-miljø: PC-opsætning,
+                domænetilkobling via Azure Entra ID, brugeradministration i M365,
+                ugentlige syslog-rapporter, monitorering af antivirus/backup
+                og DNS-baseret e-mailsikkerhed (SPF, DKIM, DMARC).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2023 – 2025</div>
+            <div class="timeline-line">
+              <div class="timeline-dot"></div>
+              <div class="timeline-connector"></div>
+            </div>
+            <div class="timeline-content">
+              <h3>IT-Teknolog (Erhvervsakademiuddannelse)</h3>
+              <div class="org">UCN Aalborg</div>
+              <p>
+                Netværk, programmering, indlejrede systemer og projektstyring.
+                Grundlag for professionsbacheloruddannelsen.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section id="contact">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <div class="contact-box">
+            <a class="btn btn-outline"
+               href="https://www.linkedin.com/in/lpsn0x/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <a class="btn btn-outline"
+               href="https://tryhackme.com/p/Lpsn0x"
+               target="_blank"
+               rel="noopener noreferrer">
+              TryHackMe
+            </a>
+            <a class="btn btn-outline"
+               href="https://github.com/Lpsn0x"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="container">
+  </footer>
+
+  <!-- Script at end of body = loads after HTML is parsed.
+       'defer' would also work at the top, but bottom placement
+       is the classic approach and is equally correct. -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
