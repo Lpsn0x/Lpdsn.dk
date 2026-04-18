@@ -864,9 +864,11 @@ footer span {
 
   .hero-image {
     order: -1;
+    justify-content: center;
+    margin-top: 0;
   }
 
-  .hero-image img {
+  .glitch-wrap {
     max-width: 200px;
   }
 
