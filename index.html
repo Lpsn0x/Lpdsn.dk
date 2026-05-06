@@ -36,7 +36,7 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
-  <title>lpdsn | Sikkerhed & Forensics</title>
+  <title>lpsn | Sikkerhed & Forensics</title>
 
   <!-- SEO: description shown in Google search results -->
   <meta name="description" content="Lasse Pedersen — IT-sikkerhedsstuderende, SOC & digital efterforskning, SIEM, Linux, OSINT.">
@@ -54,10 +54,19 @@
 </head>
 <body>
 
+  <header class="site-header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">Om</a></li>
+        <li><a href="#skills">Kompetencer</a></li>
+        <li><a href="#experience">Erfaring</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- ============================================================
        HERO SECTION
-       <main> wraps the primary content — only one per page.
-       <section> groups related content with a semantic meaning.
        ============================================================ -->
   <main>
     <section id="hero">
@@ -73,33 +82,21 @@
           <span id="typed-text"></span><span class="cursor" aria-hidden="true"></span>
         </p>
 
-        <div class="hero-outer">
-
-          <!-- VERTICAL NAV — left of hero text -->
-          <nav>
-            <ul class="nav-links">
-              <li><a href="#about">Om</a></li>
-              <li><a href="#skills">Kompetencer</a></li>
-              <li><a href="#experience">Erfaring</a></li>
-              <li><a href="#contact">Kontakt</a></li>
-            </ul>
-          </nav>
-
         <div class="hero-grid">
 
           <!-- LEFT — text content -->
           <div class="hero-text">
 
             <p class="hero-desc">
-              Jeg hedder Lasse. <br> Dette er mit site, og her kan du læse om hvem jeg er
-              og hvad jeg kan, og til tider følge med i projekter og ting jeg har gang i.
-              Når jeg ikke studerer finder du mig på TryHackMe, hvor jeg løser challenges
+              Jeg hedder Lasse. <br> Dette er mit site, og her kan du læse, om hvem jeg er,
+              og hvad jeg kan. Til tider kan du følge med i projekter, og ting jeg har gang i.
+              Når jeg ikke studerer, finder du mig på TryHackMe, hvor jeg løser challenges
               inden for OSINT og forensics. To områder jeg er helt vild med.
             </p>
 
           </div>
 
-          <!-- RIGHT — profile image with glitch effect on hover -->
+          <!-- RIGHT — profile image -->
           <div class="hero-image">
             <div class="image-frame">
               <div class="glitch-wrap">
@@ -110,7 +107,6 @@
             </div>
           </div>
 
-        </div>
         </div>
       </div>
     </section>
@@ -134,20 +130,41 @@
               Praktisk erfaring fra praktik hos <strong class="hl">LabTech Data Erhverv</strong>,
               hvor jeg arbejdede med netværksinfrastruktur, Microsoft 365 og
               sikkerhedsmonitorering med Wazuh og Suricata. Til daglig nørder jeg
-              med TryHackMe, Linux og en hjemmeserver der aldrig helt er færdig.
+              med TryHackMe, Linux og en hjemmeserver, der aldrig helt er færdig.
             </p>
           </div>
           <div>
             <p class="about-label">// Udforsker</p>
-            <div class="tag-list">
-              <span class="tag">Digital Forensics</span>
-              <span class="tag">OSINT</span>
-              <span class="tag">Linux</span>
-              <span class="tag">Docker</span>
-              <span class="tag">CTF</span>
-              <span class="tag">Networking</span>
-              <span class="tag">Python</span>
-            </div>
+            <dl class="explore-list">
+              <div class="explore-item">
+                <dt>[Digital Forensics]</dt>
+                <dd>Analyse af digitale spor, disk images og bevissikring.</dd>
+              </div>
+              <div class="explore-item">
+                <dt>[OSINT]</dt>
+                <dd>Indsamling og kortlægning via åbne kilder og offentlige databaser.</dd>
+              </div>
+              <div class="explore-item">
+                <dt>[Linux]</dt>
+                <dd>Daglig driver — Arch og Debian til alt fra server til desktop.</dd>
+              </div>
+              <div class="explore-item">
+                <dt>[Docker]</dt>
+                <dd>Hjemmelab med containere: Wazuh, Suricata og meget mere.</dd>
+              </div>
+              <div class="explore-item">
+                <dt>[CTF]</dt>
+                <dd>Capture The Flag med fokus på forensics og OSINT på TryHackMe.</dd>
+              </div>
+              <div class="explore-item">
+                <dt>[Networking]</dt>
+                <dd>Netværksdesign, VLAN, routing og trafikanalyse med Wireshark.</dd>
+              </div>
+              <div class="explore-item">
+                <dt>[Python]</dt>
+                <dd>Automatisering, scripts og enkle analyseværktøjer.</dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>
@@ -268,26 +285,26 @@
     <section id="contact">
       <div class="container">
         <h2>Kontakt</h2>
+        <p class="contact-intro">Har du et spørgsmål eller et samarbejde i tankerne? Find mig her:</p>
         <div class="contact-box">
-            <a class="btn btn-outline"
-               href="https://www.linkedin.com/in/lpsn0x/"
-               target="_blank"
-               rel="noopener noreferrer">
-              LinkedIn
-            </a>
-            <a class="btn btn-outline"
-               href="https://tryhackme.com/p/Lpsn0x"
-               target="_blank"
-               rel="noopener noreferrer">
-              TryHackMe
-            </a>
-            <a class="btn btn-outline"
-               href="https://github.com/Lpsn0x"
-               target="_blank"
-               rel="noopener noreferrer">
-              GitHub
-            </a>
-          </div>
+          <a class="btn btn-outline"
+             href="https://www.linkedin.com/in/lpsn0x/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn
+          </a>
+          <a class="btn btn-outline"
+             href="https://tryhackme.com/p/Lpsn0x"
+             target="_blank"
+             rel="noopener noreferrer">
+            TryHackMe
+          </a>
+          <a class="btn btn-outline"
+             href="https://github.com/Lpsn0x"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub
+          </a>
         </div>
       </div>
     </section>
@@ -300,9 +317,7 @@
     <div class="container">
   </footer>
 
-  <!-- Script at end of body = loads after HTML is parsed.
-       'defer' would also work at the top, but bottom placement
-       is the classic approach and is equally correct. -->
+  <!-- Script at end of body -->
   <script src="assets/js/main.js"></script>
 
 </body>
